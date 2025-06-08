@@ -107,20 +107,40 @@ header .navbar.animate {
     opacity: 0.8;
 }
 
+#hero .image {
+    width: 125%;
+    margin: 0 auto;
+}
+
 #hero .image img {
     box-shadow:0px 8px 56px rgba(15, 80, 100, 0.16);
     padding: 0;
     border: 3px solid var(--secondary-color);
     border-radius: 1rem;
+    width: 100%;
 }
 
 #hero .image.animate img {
     animation: fade-in 1s ease-out;
 }
 
-#hero .image img:hover {
-    cursor: pointer;
-    content: url('/images/me_fun.png');
+/* Desktop hover effect */
+@media (hover: hover) {
+    #hero .image img:hover {
+        cursor: pointer;
+        content: url('/images/me_fun.png');
+    }
+}
+
+/* Mobile click effect */
+@media (hover: none) {
+    #hero .image img {
+        cursor: pointer;
+    }
+    
+    #hero .image img.toggled {
+        content: url('/images/me_fun.png');
+    }
 }
 
 #hero .image.animate img:hover {
